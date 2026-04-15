@@ -7,6 +7,9 @@ misc 2:  #9290C3
 
 /* Background */
 body {
+  font-family: "Nova Round", system-ui;
+  font-weight: 50; /* there is only like two font weights with this supported font */
+  font-style: normal;
   transition: background-color 0.3s ease;
 }
 
@@ -26,11 +29,15 @@ body.light {
   box-shadow: 0 0 2px #1e1d5f;
 }
 
-/* Big bolded text */
-h1 {
-  font-family: "Nova Round", system-ui;
-  font-size: 2.5rem;
-  font-weight: 50; /* there is only like two font weights with this supported font */
-  font-style: normal;
+/* Generic Text */
+h1, h2, h3, p {
   color: #59639b;
 }
+/* Big Title Text */
+h1 { font-size: 2.5rem; }
+/* Secondary Title Test */
+h2 { font-size: 2.0rem; }
+/* Small Title Test */
+h3 { font-size: 1.75rem; }
+/* Paragraph Text */
+p { font-size: 1.5rem; }
