@@ -57,9 +57,28 @@ h3 { font-size: 1.75rem; }
 p { font-size: 1.0rem; color: #7b87d8;}
 
 /* version notes */
-.footer-text {
+.footer-text-explore, .footer-text-version {
   position: fixed;
-  bottom: 3px;
+}
+.footer-text-explore {
+  left: 12px;
+  bottom: 0px;
+  font-size: 0.75rem;
+}
+.footer-text-version {
   right: 12px;
+  bottom: 3px;
   font-size: 0.5rem;
+}
+
+/* Buttons */
+.box-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.box-btn {
+  width: 150px;
+  height: 150px;
+  font-size: 1.2rem;
 }

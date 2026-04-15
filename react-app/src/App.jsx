@@ -13,7 +13,14 @@ function App(){
       <button onClick={() => setDark(!dark)}>Toggle Theme</button>
       <h1 className="title">Portfolio (work in progress)</h1>
       <About />
-      <p className="footer-text">Version 0.1.0</p>
+      <div className="box-buttons">
+        <button className="box-btn">Projects</button>
+        <button className="box-btn">Skills</button>
+        <button className="box-btn">Contact</button>
+        <button className="box-btn">Arts</button>
+      </div>
+      <p className="footer-text-explore">Home</p>
+      <p className="footer-text-version">Version 0.1.0</p>
     </div>
   )
 }
