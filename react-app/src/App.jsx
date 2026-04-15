@@ -9,9 +9,9 @@ function App(){
 
   return (
     <div>
+      <div className="line-u" />
       <button onClick={() => setDark(!dark)}>Toggle Theme</button>
-      <h1>Portfolio (work in progress)</h1>
-      <div className="line" />
+      <h1 className="title">Portfolio (work in progress)</h1>
       <About />
       <p className="footer-text">Version 0.1.0</p>
     </div>

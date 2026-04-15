@@ -22,12 +22,14 @@ body.light {
 }
 
 /* Miscallaneous lines */
-.line {
-  margin: 25px auto;
+.line-u {
   width: 50%;
-  height: 1.5px;
-  background-color: #1e1d5f;
-  box-shadow: 0 0 2px #1e1d5f;
+  margin: -10px auto;
+  height: 125px;
+  border-left: 1.5px solid #1e1d5f;
+  border-right: 1.5px solid #1e1d5f;
+  border-bottom: 1.5px solid #1e1d5f;
+  box-shadow: 0 2px 3px #2c2b8e;
 }
 
 /* Generic Text */
@@ -38,8 +40,14 @@ h1, h2, h3, p, .footer-text {
 h1 {
   text-align: center;
   margin-top: 50px;
-  margin-left: 20px;
   font-size: 2.5rem;
+}
+.title {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  margin-top: -100px;
+  text-align: center;
 }
 /* Secondary Title Test */
 h2 { font-size: 2.0rem; }
