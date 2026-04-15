@@ -23,21 +23,35 @@ body.light {
 
 /* Miscallaneous lines */
 .line {
-  width: 100%;
+  margin: 25px auto;
+  width: 50%;
   height: 1.5px;
   background-color: #1e1d5f;
   box-shadow: 0 0 2px #1e1d5f;
 }
 
 /* Generic Text */
-h1, h2, h3, p {
-  color: #59639b;
+h1, h2, h3, p, .footer-text {
+  color: #7b87d8;
 }
 /* Big Title Text */
-h1 { font-size: 2.5rem; }
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 20px;
+  font-size: 2.5rem;
+}
 /* Secondary Title Test */
 h2 { font-size: 2.0rem; }
 /* Small Title Test */
 h3 { font-size: 1.75rem; }
 /* Paragraph Text */
-p { font-size: 1.5rem; }
+p { font-size: 1.0rem; color: #7b87d8;}
+
+/* version notes */
+.footer-text {
+  position: fixed;
+  bottom: 3px;
+  right: 12px;
+  font-size: 0.5rem;
+}
