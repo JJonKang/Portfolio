@@ -1,8 +1,17 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import { useState } from 'react'
 import './index.css'
 import About from './written/About.jsx'
-import Contact from './pages/Contacts.jsx'
+import Contacts from './pages/Contacts.jsx'
+import Projects from './pages/Projects.jsx'
+import Skills from './pages/Skills.jsx'
+import Arts from './pages/Arts.jsx'
+
+/////////////////////////////////////
+// Easily change the version name
+function Version() {
+  return "Version 0.2.0"
+}
 
 /////////////////////////////////////
 // It's the home menu, where the user
@@ -29,22 +38,16 @@ function Home({ dark, setDark }) {
       <h1 className="title">Portfolio</h1>
       <About />
       <div className="box-buttons">
-        <button className={btnClass}>Projects</button>
-        <button className={btnClass}>Skills</button>
-        <button className={btnClass}>Contact</button>
-        <button className={btnClass}>Arts</button>
+        <Link to="/projects"><button className={btnClass}>Projects</button></Link>
+        <Link to="/skills"><button className={btnClass}>Skills</button></Link>
+        <Link to="/contacts"><button className={btnClass}>Contacts</button></Link>
+        <Link to="/arts"><button className={btnClass}>Arts</button></Link>
       </div>
       <p className="footer-text-explore">Home</p>
-      <p className="footer-text-version">{<Version />}</p>
+      <p className="footer-text-version"><Version /></p>
     </div>
   );
 };
-
-/////////////////////////////////////
-// Easily change the version name
-function Version() {
-  return "Version 0.2.0"
-}
 
 /////////////////////////////////////
 // Hub for all details, including
@@ -57,7 +60,10 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home dark={dark} setDark={setDark} />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/arts" element={<Arts />} />
       </Routes>
     </BrowserRouter>
   )

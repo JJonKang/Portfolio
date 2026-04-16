@@ -129,3 +129,9 @@ p { font-size: 1.0rem; color: #7b87d8;}
 .box-btn-light {
   background-color: #dfd9ff; 
 }
+
+/* Something about changing the basic layout of link a */
+a {
+  display: contents;
+  text-decoration: none;
+}
