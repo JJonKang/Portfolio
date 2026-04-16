@@ -4,6 +4,9 @@ import './index.css'
 import About from './written/About.jsx'
 import Contact from './pages/Contacts.jsx'
 
+/////////////////////////////////////
+// It's the home menu, where the user
+// Begins in.
 function Home({ dark, setDark }) {
   const btnClass = "box-btn " + (dark ? 'box-btn-dark' : 'box-btn-light')
   const btnLightClass = "box-btn-color-change " + (dark ? 'box-btn-dark' : 'box-btn-light')
@@ -37,6 +40,9 @@ function Home({ dark, setDark }) {
   );
 };
 
+/////////////////////////////////////
+// Hub for all details, including
+// the home page
 function App() {
   const [dark, setDark] = useState(false)
   document.body.className = dark ? 'dark' : 'light';

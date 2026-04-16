@@ -1,5 +1,8 @@
 import '../index.css'
 
+/////////////////////////////////////
+// Currently Only serves the paragraph
+// that details who I am
 function About() {
   return (
     <div>
