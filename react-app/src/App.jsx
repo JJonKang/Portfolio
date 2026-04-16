@@ -35,10 +35,16 @@ function Home({ dark, setDark }) {
         <button className={btnClass}>Arts</button>
       </div>
       <p className="footer-text-explore">Home</p>
-      <p className="footer-text-version">Version 0.1.0</p>
+      <p className="footer-text-version">{<Version />}</p>
     </div>
   );
 };
+
+/////////////////////////////////////
+// Easily change the version name
+function Version() {
+  return "Version 0.2.0"
+}
 
 /////////////////////////////////////
 // Hub for all details, including
