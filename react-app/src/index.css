@@ -117,6 +117,7 @@ p { font-size: 1.0rem; color: #7b87d8;}
   font-size: 1.2rem;
   transition: background-color 0.3s ease;
   box-shadow: 0 2px 3px #2c2b8e;
+  font-family: "Nova Round", system-ui;
 }
 
 .box-btn-dark {
