@@ -23,7 +23,7 @@ body.light {
 
 /* Miscallaneous lines */
 .line-u {
-  width: 50%;
+  width: 580px;
   margin: -10px auto;
   height: 125px;
   border-left: 1.5px solid #1e1d5f;
@@ -32,8 +32,21 @@ body.light {
   box-shadow: 0 2px 3px #2c2b8e;
 }
 
+/* wip? */
+/* .line-c {
+  position: absolute;
+  width: 290px;
+  margin-right: 0px;
+  margin-top: -250px;
+  height: 300px;
+  right: 0;
+  border-left: 1.5px solid #1e1d5f;
+  border-bottom: 1.5px solid #1e1d5f;
+  box-shadow: 0px 2px 3px #2c2b8e;
+} */
+
 /* Generic Text */
-h1, h2, h3, p, .footer-text {
+h1, h2, h3, p, .footer-text, .box-buttons, .box-btn {
   color: #7b87d8;
 }
 /* Big Title Text */
@@ -50,7 +63,11 @@ h1 {
   text-align: center;
 }
 /* Secondary Title Test */
-h2 { font-size: 2.0rem; }
+h2 {
+  margin-top: 20px;
+  height: 15px;
+  font-size: 2.0rem;
+}
 /* Small Title Test */
 h3 { font-size: 1.75rem; }
 /* Paragraph Text */
@@ -78,7 +95,8 @@ p { font-size: 1.0rem; color: #7b87d8;}
 }
 
 .box-btn {
-  width: 150px;
-  height: 150px;
+  margin: 0 auto;
+  width: 350px;
+  height: 170px;
   font-size: 1.2rem;
 }
