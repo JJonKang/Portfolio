@@ -5,6 +5,12 @@ text:    #535C91
 misc 2:  #9290C3
 */
 
+/* 
+priority layers:
+0: default
+5: light button
+*/
+
 /* Background */
 body {
   font-family: "Nova Round", system-ui;
@@ -94,11 +100,23 @@ p { font-size: 1.0rem; color: #7b87d8;}
   gap: 1rem;
 }
 
+.box-btn-color-change { /* For light theme changing */
+  position: absolute;
+  top: 6px;
+  width: 50px;
+  height: 50px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 3px #2c2b8e;
+  z-index: 5; /* Priority layer */
+}
+
 .box-btn {
   margin: 0 auto;
   width: 350px;
   height: 170px;
   font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 3px #2c2b8e;
 }
 
 .box-btn-dark {
