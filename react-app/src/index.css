@@ -100,3 +100,12 @@ p { font-size: 1.0rem; color: #7b87d8;}
   height: 170px;
   font-size: 1.2rem;
 }
+
+.box-btn-dark {
+  background-color: #15173D; 
+  /* dark:  #15173D https://colorhunt.co/palette/15173d982598e491c9f1e9e9 */
+}
+
+.box-btn-light {
+  background-color: #dfd9ff; 
+}
