@@ -135,3 +135,11 @@ a {
   display: contents;
   text-decoration: none;
 }
+
+/* Resume and other file insertions */
+.contacts {
+  display: block;
+  margin: auto;
+  width: 80%;
+  height: 1000px;
+}
