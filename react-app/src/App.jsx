@@ -10,19 +10,16 @@ import Arts from './pages/Arts.jsx'
 /////////////////////////////////////
 // Easily change the version name
 function Version() {
-  return "Version 0.2.0"
+  return "Version 0.2.5"
 }
 
 /////////////////////////////////////
-// It's the home menu, where the user
-// Begins in.
-function Home({ dark, setDark }) {
-  const btnClass = "box-btn " + (dark ? 'box-btn-dark' : 'box-btn-light')
+// Keep these in multiple webpages
+function Layout({ dark, setDark }) {
   const btnLightClass = "box-btn-color-change " + (dark ? 'box-btn-dark' : 'box-btn-light')
 
   return (
     <div>
-      <div className="line-u" />
       {/* https://www.untitledui.com/free-icons */}
       <button className={btnLightClass} onClick={() => setDark(!dark)}>
         {dark ? (<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,6 +32,22 @@ function Home({ dark, setDark }) {
           </svg>
         )}
       </button>
+      <Outlet />
+      <p className="footer-text-explore">Home</p>
+      <p className="footer-text-version"><Version /></p>
+    </div>
+  );
+};
+
+/////////////////////////////////////
+// It's the home menu, where the user
+// Begins in.
+function Home({ dark, setDark }) {
+  const btnClass = "box-btn " + (dark ? 'box-btn-dark' : 'box-btn-light')
+
+  return (
+    <div>
+      <div className="line-u" />
       <h1 className="title">Portfolio</h1>
       <About />
       <div className="box-buttons">
@@ -43,8 +56,6 @@ function Home({ dark, setDark }) {
         <Link to="/contacts"><button className={btnClass}>Contacts</button></Link>
         <Link to="/arts"><button className={btnClass}>Arts</button></Link>
       </div>
-      <p className="footer-text-explore">Home</p>
-      <p className="footer-text-version"><Version /></p>
     </div>
   );
 };
@@ -59,11 +70,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home dark={dark} setDark={setDark} />} />
-        <Route path="/contacts" element={<Contacts />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/arts" element={<Arts />} />
+        <Route element={<Layout dark={dark} setDark={setDark} />}>
+          <Route path="/" element={<Home dark={dark} setDark={setDark} />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/arts" element={<Arts />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )
