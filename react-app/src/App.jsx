@@ -1,17 +1,41 @@
-import { BrowserRouter, Routes, Route, Link, Outlet } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link, Outlet, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 import './index.css'
 import About from './written/About.jsx'
-import Contacts from './pages/Contacts.jsx'
+import Resume from './pages/Resume.jsx'
 import Projects from './pages/Projects.jsx'
 import Skills from './pages/Skills.jsx'
-import Arts from './pages/Arts.jsx'
+import Contacts from './pages/Contacts.jsx'
 
 /////////////////////////////////////
 // Easily change the version name
 function Version() {
   return "Version 0.2.5"
 }
+
+/////////////////////////////////////
+// Breadcrumb for webpage navigation
+function Breadcrumb() {
+  const location = useLocation()
+  const paths = location.pathname.split('/').filter(Boolean)
+
+  const crumbs = ['Home', ...paths.map(p => p.charAt(0).toUpperCase() + p.slice(1))]
+
+  return (
+    <p className="footer-text-explore">
+      {crumbs.map((crumb, index) => {
+        const path = index === 0 ? '/' : '/' + crumb.toLowerCase()
+        const isLast = index === crumbs.length - 1
+        return (
+          <span key={index}>
+            {index > 0 && ' -> '}
+            {isLast ? crumb : <Link to={path}>{crumb}</Link>}
+          </span>
+        )
+      })}
+    </p>
+  );
+};
 
 /////////////////////////////////////
 // Keep these in multiple webpages
@@ -33,7 +57,7 @@ function Layout({ dark, setDark }) {
         )}
       </button>
       <Outlet />
-      <p className="footer-text-explore">Home</p>
+      <Breadcrumb />
       <p className="footer-text-version"><Version /></p>
     </div>
   );
@@ -42,7 +66,7 @@ function Layout({ dark, setDark }) {
 /////////////////////////////////////
 // It's the home menu, where the user
 // Begins in.
-function Home({ dark, setDark }) {
+function Home({ dark }) {
   const btnClass = "box-btn " + (dark ? 'box-btn-dark' : 'box-btn-light')
 
   return (
@@ -53,8 +77,8 @@ function Home({ dark, setDark }) {
       <div className="box-buttons">
         <Link to="/projects"><button className={btnClass}>Projects</button></Link>
         <Link to="/skills"><button className={btnClass}>Skills</button></Link>
+        <Link to="/resume"><button className={btnClass}>Resume</button></Link>
         <Link to="/contacts"><button className={btnClass}>Contacts</button></Link>
-        <Link to="/arts"><button className={btnClass}>Arts</button></Link>
       </div>
     </div>
   );
@@ -71,11 +95,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<Layout dark={dark} setDark={setDark} />}>
-          <Route path="/" element={<Home dark={dark} setDark={setDark} />} />
-          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/" element={<Home dark={dark} />} />
+          <Route path="/resume" element={<Resume />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
-          <Route path="/arts" element={<Arts />} />
+          <Route path="/contacts" element={<Contacts />} />
         </Route>
       </Routes>
     </BrowserRouter>

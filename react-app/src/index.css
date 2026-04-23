@@ -88,6 +88,10 @@ p { font-size: 1.0rem; color: #7b87d8;}
   bottom: 0px;
   font-size: 0.75rem;
 }
+.footer-text-explore a {
+  text-decoration: underline;
+  display: inline;
+}
 .footer-text-version {
   right: 12px;
   bottom: 3px;
@@ -137,7 +141,7 @@ a {
 }
 
 /* Resume and other file insertions */
-.contacts {
+.resume {
   display: block;
   margin: auto;
   width: 80%;
