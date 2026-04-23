@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link, Outlet } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link, Outlet, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 import './index.css'
 import About from './written/About.jsx'
@@ -14,9 +14,23 @@ function Version() {
 }
 
 /////////////////////////////////////
+// Breadcrumb for webpage navigation
+function Breadcrumb() {
+  const location = useLocation()
+  const paths = location.pathname.split('/').filter(Boolean)
+
+  const crumbs = ['Home', ...paths.map(p => p.charAt(0).toUpperCase() + p.slice(1))]
+
+  return (
+  <p className="footer-text-explore">{crumbs.join(' -> ')}</p>
+  );
+};
+
+/////////////////////////////////////
 // Keep these in multiple webpages
 function Layout({ dark, setDark }) {
   const btnLightClass = "box-btn-color-change " + (dark ? 'box-btn-dark' : 'box-btn-light')
+  const location = useLocation()
 
   return (
     <div>
@@ -33,7 +47,7 @@ function Layout({ dark, setDark }) {
         )}
       </button>
       <Outlet />
-      <p className="footer-text-explore">Home</p>
+      <Breadcrumb />
       <p className="footer-text-version"><Version /></p>
     </div>
   );
@@ -42,7 +56,7 @@ function Layout({ dark, setDark }) {
 /////////////////////////////////////
 // It's the home menu, where the user
 // Begins in.
-function Home({ dark, setDark }) {
+function Home({ dark }) {
   const btnClass = "box-btn " + (dark ? 'box-btn-dark' : 'box-btn-light')
 
   return (
@@ -71,7 +85,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<Layout dark={dark} setDark={setDark} />}>
-          <Route path="/" element={<Home dark={dark} setDark={setDark} />} />
+          <Route path="/" element={<Home dark={dark} />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
