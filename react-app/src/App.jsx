@@ -41,6 +41,7 @@ function Breadcrumb() {
 // Keep these in multiple webpages
 function Layout({ dark, setDark }) {
   const btnLightClass = "box-btn-color-change " + (dark ? 'box-btn-dark' : 'box-btn-light')
+  const location = useLocation()
 
   return (
     <div>
