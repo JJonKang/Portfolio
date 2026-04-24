@@ -52,7 +52,7 @@ body.light {
 } */
 
 /* Generic Text */
-h1, h2, h3, p, .footer-text, .box-buttons, .box-btn {
+h1, h2, h3, p, .footer-text, .box-buttons, .box-btn, .contact-divider {
   color: #7b87d8;
 }
 /* Big Title Text */
@@ -138,6 +138,7 @@ p { font-size: 1.0rem; color: #7b87d8;}
 a {
   display: contents;
   text-decoration: none;
+  color: #445dfa;
 }
 
 /* Resume and other file insertions */
@@ -146,4 +147,11 @@ a {
   margin: auto;
   width: 80%;
   height: 1000px;
+}
+
+/* spacing out the contacts */
+.contact-divider {
+  display: flex;
+  justify-content: center;
+  gap: 340px;
 }

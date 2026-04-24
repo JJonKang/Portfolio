@@ -28,7 +28,7 @@ function Breadcrumb() {
         const isLast = index === crumbs.length - 1
         return (
           <span key={index}>
-            {index > 0 && ' -> '}
+            {index > 0 && ' > '}
             {isLast ? crumb : <Link to={path}>{crumb}</Link>}
           </span>
         )
