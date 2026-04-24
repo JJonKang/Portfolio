@@ -151,7 +151,12 @@ a {
 
 /* spacing out the contacts */
 .contact-divider {
-  display: flex;
-  justify-content: center;
-  gap: 340px;
+  display: grid;
+  grid-template-columns: minmax(200px, 300px) minmax(200px, 300px);
+  /* grid-template-columns: 1fr 1fr; */
+  width: fit-content;
+  margin: 0 auto;
+  gap: 20px 170px;
+  /* justify-content: center;
+  gap: 340px; */
 }

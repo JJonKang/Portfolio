@@ -18,7 +18,7 @@ function Contacts() {
           <a>jkjonkang0@gmail.com</a>
         </div>
         <div>
-          {/* literally nothing */}
+          {/* literally nothing for now*/}
         </div>
       </div>
     </div>
