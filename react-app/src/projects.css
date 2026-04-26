@@ -1,0 +1,24 @@
+/* The projects webpage has the largest amount of required css details
+///so that's why it gets its own dedicated file */
+
+.scroller {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+  cursor: grab;
+}
+
+.scroller-item {
+  scroll-snap-align: start;
+  min-width: 250px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.scroller-item img {
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+}
