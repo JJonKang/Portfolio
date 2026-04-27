@@ -9,12 +9,19 @@ const projects = [
         title: "Wine Query Answering System",
         description: "(wip) A Python backend with TypeScript frontend using PostgreSQL and vector embeddings with cosine similarity.",
         images: [
-          { src: "/projects/wine-query-answering-system/main-menu.png", caption: "Query interface" },
-          { src: "/projects/wine-query-answering-system/sign-up.png", caption: "Results view" },
-          { src: "/projects/wine-query-answering-system/admin-page.png", caption: "Results view" },
-          { src: "/projects/wine-query-answering-system/curator-page.png", caption: "Results view" },
-          { src: "/projects/wine-query-answering-system/query-one.png", caption: "Results view" },
-          { src: "/projects/wine-query-answering-system/query-two.png", caption: "Results view" },
+          { src: "/projects/wine-query-answering-system/main-menu.png", caption: "Main Menu" },
+          { src: "/projects/wine-query-answering-system/sign-up.png", caption: "Sign Up Screen" },
+          { src: "/projects/wine-query-answering-system/admin-page.png", caption: "Administrator Page" },
+          { src: "/projects/wine-query-answering-system/curator-page.png", caption: "Curator Page" },
+          { src: "/projects/wine-query-answering-system/query-one.png", caption: "Query Page" },
+          { src: "/projects/wine-query-answering-system/query-two.png", caption: "Query Page" },
+        ]
+      },
+      {
+        title: "Fish and Fitness",
+        description: "fish",
+        images: [
+
         ]
       }
     ]
@@ -23,9 +30,23 @@ const projects = [
     topic: "Computer Graphics",
     projects: [
       {
-        title: "yes",
-        description: "yes",
-        images: []
+        title: "Digital Elevation Model (DEM) Visualizer",
+        description: "mountains",
+        images: [
+
+        ]
+      },
+      {
+        title: "Basic Ray Tracing Test",
+        description: "wowowow light",
+        images: [
+          { src: "/projects/ray-tracing/everything-max-depth.png", caption: "Completed Visualization" },
+          { src: "/projects/ray-tracing/everything-min-depth.png", caption: "Completed Visualization with One Depth Reflection" },
+          { src: "/projects/ray-tracing/ambient-only.png", caption: "Ambient Component Only" },
+          { src: "/projects/ray-tracing/diffuse-specular-reflection.png", caption: "Diffuse, Specular, Reflection Component" },
+          { src: "/projects/ray-tracing/ambient-diffuse-specular.png", caption: "Misc. Image" },
+          { src: "/projects/ray-tracing/ambient-specular-reflection.png", caption: "Misc. Image 2" },
+        ]
       }
     ]
   },
@@ -36,9 +57,9 @@ const projects = [
         title: "3-Card Poker",
         description: "(wip) Multiplayer 3-card poker app built with Java, JavaFX, Apache Maven, and 250+ JUnit 5 unit tests.",
         images: [
-          { src: "/projects/three-card-poker/main-menu.png", caption: "Game screen" },
-          { src: "/projects/three-card-poker/example-one.png", caption: "Game screen" },
-          { src: "/projects/three-card-poker/example-two.png", caption: "Game screen" },
+          { src: "/projects/three-card-poker/main-menu.png", caption: "Main Menu" },
+          { src: "/projects/three-card-poker/example-one.png", caption: "Gameplay 1" },
+          { src: "/projects/three-card-poker/example-two.png", caption: "Gameplay 2" },
         ]
       }
     ]
