@@ -42,6 +42,8 @@ const projects = [
         images: [
           { src: "/projects/ray-tracing/everything-max-depth.png", caption: "Completed Visualization" },
           { src: "/projects/ray-tracing/everything-min-depth.png", caption: "Completed Visualization with One Depth Reflection" },
+          { src: "/projects/ray-tracing/everything-max-depth-two.png", caption: "Completed Visualization Model #2" },
+          { src: "/projects/ray-tracing/ambient-diffuse-model-two.png", caption: "No Reflection/Specular Component Model #2" },
           { src: "/projects/ray-tracing/ambient-only.png", caption: "Ambient Component Only" },
           { src: "/projects/ray-tracing/diffuse-specular-reflection.png", caption: "Diffuse, Specular, Reflection Component" },
           { src: "/projects/ray-tracing/ambient-diffuse-specular.png", caption: "Misc. Image" },
