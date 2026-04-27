@@ -21,7 +21,14 @@ const projects = [
         title: "Fish and Fitness",
         description: "fish",
         images: [
-
+          { src: "/projects/fish-and-fitness/intro-page.png", caption: "Intro Page" },
+          { src: "/projects/fish-and-fitness/login-page.png", caption: "Log In Screen" },
+          { src: "/projects/fish-and-fitness/main-page.png", caption: "Main Page" },
+          { src: "/projects/fish-and-fitness/goals-tab.png", caption: "Goals Tab" },
+          { src: "/projects/fish-and-fitness/goal-in-progress.png", caption: "Goal In Progress" },
+          { src: "/projects/fish-and-fitness/backpack.png", caption: "Backpack Tab" },
+          { src: "/projects/fish-and-fitness/fishapedia-tab.png", caption: "Fishapedia Tab" },
+          { src: "/projects/fish-and-fitness/opening-crate.png", caption: "Opening a Crate" },
         ]
       }
     ]
