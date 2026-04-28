@@ -40,7 +40,11 @@ const projects = [
         title: "Digital Elevation Model (DEM) Visualizer",
         description: "mountains",
         images: [
-
+          { src: "/projects/dem/phong-light-two.png", caption: "Phong Lighting Model Example #1" },
+          { src: "/projects/dem/normals-bsq-two.png", caption: "Surface Normals (RGB)" },
+          { src: "/projects/dem/phong-light-one.png", caption: "Phong Lighting Model Example #2" },
+          { src: "/projects/dem/donut.png", caption: "Model Using Non-BSQ Format" },
+          { src: "/projects/dem/underside.png", caption: "Underside of a BSQ File" },
         ]
       },
       {
