@@ -1,7 +1,7 @@
 function Contacts() {
   return (
     <div>
-      <h1 style={{ marginTop: '35px'}}>Contacts</h1>
+      <h1 style={{ marginTop: '35px' }}>Contacts</h1>
       <div className="contact-divider">
         <div>
           <p>LinkedIn:</p>

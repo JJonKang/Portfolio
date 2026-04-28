@@ -4,7 +4,7 @@ import './index.css'
 import About from './written/About.jsx'
 import Resume from './pages/Resume.jsx'
 import Projects from './pages/Projects.jsx'
-import Skills from './pages/Skills.jsx'
+import Certificates from './pages/Certificates.jsx'
 import Contacts from './pages/Contacts.jsx'
 
 /////////////////////////////////////
@@ -77,7 +77,7 @@ function Home({ dark }) {
       <About />
       <div className="box-buttons">
         <Link to="/projects"><button className={btnClass}>Projects</button></Link>
-        <Link to="/skills"><button className={btnClass}>Skills</button></Link>
+        <Link to="/certificates"><button className={btnClass}>Certificates</button></Link>
         <Link to="/resume"><button className={btnClass}>Resume</button></Link>
         <Link to="/contacts"><button className={btnClass}>Contacts</button></Link>
       </div>
@@ -99,7 +99,7 @@ function App() {
           <Route path="/" element={<Home dark={dark} />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/skills" element={<Skills />} />
+          <Route path="/certificates" element={<Certificates />} />
           <Route path="/contacts" element={<Contacts />} />
         </Route>
       </Routes>
