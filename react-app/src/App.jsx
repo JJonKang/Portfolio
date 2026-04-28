@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route, Link, Outlet, useLocation } from 'react-router-dom'
+import { HashRouter, Routes, Route, Link, Outlet, useLocation } from 'react-router-dom'
+//previously used BrowserRouter but seems that HashRouter is good for GitHub hosting
 import { useState } from 'react'
 import './index.css'
 import About from './written/About.jsx'
@@ -93,7 +94,7 @@ function App() {
   document.body.className = dark ? 'dark' : 'light';
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route element={<Layout dark={dark} setDark={setDark} />}>
           <Route path="/" element={<Home dark={dark} />} />
@@ -103,7 +104,7 @@ function App() {
           <Route path="/contacts" element={<Contacts />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
