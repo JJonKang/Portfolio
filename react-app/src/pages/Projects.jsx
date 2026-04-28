@@ -143,7 +143,7 @@ function Projects() {
       <div>
         {projects.map((section, i) => (
           <div key={i}>
-            <h2>{section.topic}</h2>
+            <h2 className="topic">{section.topic}</h2>
             {section.projects.map((project, j) => (
               <div key={j}>
                 <h3>{project.title}</h3>
