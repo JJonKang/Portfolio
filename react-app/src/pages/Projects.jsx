@@ -47,8 +47,8 @@ const projects = [
           { src: wineSignUp, caption: "Sign Up Screen" },
           { src: wineAdminPage, caption: "Administrator Page" },
           { src: wineCuratorPage, caption: "Curator Page" },
-          { src: wineQueryOne, caption: "Query Page" },
-          { src: wineQueryTwo, caption: "Query Page" },
+          { src: wineQueryOne, caption: "Query Page #1" },
+          { src: wineQueryTwo, caption: "Query Page #2" },
         ]
       },
       {
@@ -91,8 +91,8 @@ const projects = [
           { src: rayAmbientDiffuseModelTwo, caption: "No Reflection/Specular Component Model #2" },
           { src: rayAmbientOnly, caption: "Ambient Component Only" },
           { src: rayDiffuseSpecularReflection, caption: "Diffuse, Specular, Reflection Component" },
-          { src: rayAmbientDiffuseSpecular, caption: "Misc. Image" },
-          { src: rayAmbientSpecularReflection, caption: "Misc. Image 2" },
+          { src: rayAmbientDiffuseSpecular, caption: "Misc. Image #1" },
+          { src: rayAmbientSpecularReflection, caption: "Misc. Image #2" },
         ]
       }
     ]
@@ -105,8 +105,8 @@ const projects = [
         description: "(wip) Multiplayer 3-card poker app built with Java, JavaFX, Apache Maven, and 250+ JUnit 5 unit tests.",
         images: [
           { src: pokerMainMenu, caption: "Main Menu" },
-          { src: pokerExampleOne, caption: "Gameplay 1" },
-          { src: pokerExampleTwo, caption: "Gameplay 2" },
+          { src: pokerExampleOne, caption: "Gameplay #1" },
+          { src: pokerExampleTwo, caption: "Gameplay #2" },
         ]
       }
     ]
