@@ -4,7 +4,7 @@ function Resume() {
   return (
     <div>
       <h1 style={{ marginTop: '35px' }}>Resume</h1>
-      <embed src="/Portfolio/src/assets/resume.pdf" className="resume"/>
+      <embed src="/Portfolio/resume.pdf" className="resume"/>
     </div>
   )
 }
