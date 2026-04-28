@@ -6,10 +6,18 @@ misc 2:  #9290C3
 */
 
 /* 
-priority layers:
+priority layers (z-index):
 0: default
 5: light button
+10: centered zoomed image
 */
+
+/* Mainly for priority layering for now */
+:root {
+  --default: 0;
+  --light-button: 5;
+  --centered-image: 10;
+}
 
 /* Background */
 body {
@@ -37,19 +45,6 @@ body.light {
   border-bottom: 1.5px solid #1e1d5f;
   box-shadow: 0 2px 3px #2c2b8e;
 }
-
-/* wip? */
-/* .line-c {
-  position: absolute;
-  width: 290px;
-  margin-right: 0px;
-  margin-top: -250px;
-  height: 300px;
-  right: 0;
-  border-left: 1.5px solid #1e1d5f;
-  border-bottom: 1.5px solid #1e1d5f;
-  box-shadow: 0px 2px 3px #2c2b8e;
-} */
 
 /* Generic Text */
 h1, h2, h3, p, .footer-text, .box-buttons, .box-btn, .contact-divider {
@@ -112,7 +107,7 @@ p { font-size: 1.0rem; color: #7b87d8;}
   color: #2c2b8e;
   transition: background-color 0.3s ease;
   box-shadow: 0 2px 3px #2c2b8e;
-  z-index: 5; /* Priority layer */
+  z-index: var(--light-button); /* Priority layer */
 }
 
 .box-btn {

@@ -1,5 +1,5 @@
 import '../projects.css'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 
 const projects = [
   {
@@ -77,20 +77,26 @@ const projects = [
 
 function ImageScroller({ images }) {
   const ref = useRef(null)
+  const [expanded, setExpanded] = useState(null)
 
   return (
-    <div>
+    <>
+      {expanded !== null && (
+        <div className="zoom" onClick={() => setExpanded(null)}>
+          <img src={images[expanded].src} className="expanded-img" />
+        </div>
+      )}
       <div className="scroller" ref={ref}>
         {images.map((img, i) => (
           <div className="scroller-item" key={i}>
-            <img src={img.src} alt={img.caption} />
+            <img src={img.src} alt={img.caption} onClick={() => setExpanded(i)}/>
             <p>{img.caption}</p>
           </div>
         ))}
       </div>
-    </div>
-  )
-}
+    </>
+  );
+};
 
 function Projects() {
   return (
@@ -111,7 +117,7 @@ function Projects() {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Projects
