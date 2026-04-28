@@ -72,7 +72,12 @@ h2 {
 /* Small Title Test */
 h3 { font-size: 1.4rem; }
 /* Paragraph Text */
-p { font-size: 1.0rem; color: #7b87d8;}
+p {
+  font-size: 1.0rem;
+  color: #7b87d8;
+  white-space: pre-wrap;
+  line-height: 1.3;
+}
 
 /* version notes */
 .footer-text-explore, .footer-text-version {

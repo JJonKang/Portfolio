@@ -41,7 +41,13 @@ const projects = [
     projects: [
       {
         title: "Wine Query Answering System",
-        description: "(wip) A Python backend with TypeScript frontend using PostgreSQL and vector embeddings with cosine similarity.",
+        description: [
+          "A semantic question-answering application about wine reviews.",
+          "Backend: Python (Flask)",
+          "Frontend: TypeScript (React/Vite)",
+          "Database: PostgreSQL",
+          "Uses cosine similarity and dot product alongside a vector embedding database pipeline to get the most relevant wine passages per query.",
+        ].join('\n'),
         images: [
           { src: wineMainMenu, caption: "Main Menu" },
           { src: wineSignUp, caption: "Sign Up Screen" },
@@ -53,7 +59,14 @@ const projects = [
       },
       {
         title: "Fish and Fitness",
-        description: "fish",
+        description: [
+          "A fish-themed, goal-focused extension of the Strava exercise app.",
+          "Backend: Python (Django)",
+          "Frontend: JavaScript (React/Vite)",
+          "Database: SQLite",
+          "Utilized the Strava API to extract user data for the web application.",
+          "Added a proof-of-concept probabilistic data structure called the cuckoo filter to speed up database lookups.",
+        ].join('\n'),
         images: [
           { src: fishIntroPage, caption: "Intro Page" },
           { src: fishLoginPage, caption: "Log In Screen" },
@@ -72,7 +85,12 @@ const projects = [
     projects: [
       {
         title: "Digital Elevation Model (DEM) Visualizer",
-        description: "mountains",
+        description: [
+          "Use .BSQ height map data (or any image files) to create a 3D visualization terrain mesh.",
+          "Frontend: JavaScript + WebGL",
+          "Included option to view mesh by surface normals colors.",
+          "Included option to view mesh with light using a Phong light model.",
+        ].join('\n'),
         images: [
           { src: demPhongLightTwo, caption: "Phong Lighting Model Example #1" },
           { src: demNormalsBsqTwo, caption: "Surface Normals (RGB)" },
@@ -83,7 +101,12 @@ const projects = [
       },
       {
         title: "Basic Ray Tracing Test",
-        description: "wowowow light",
+        description: [
+          "Used JavaScript to implement a simple ray tracer for planes and spheres.",
+          "Frontend: JavaScript",
+          "Used the Blinn-Phong light model for diffuse, creating shadows and rays of light",
+          "Use a JSON file to render the scene with these components: Ambient, Diffuse, Specular, Reflection.",
+        ].join('\n'),
         images: [
           { src: rayEverythingMaxDepth, caption: "Completed Visualization" },
           { src: rayEverythingMinDepth, caption: "Completed Visualization with One Depth Reflection" },
@@ -102,8 +125,13 @@ const projects = [
     projects: [
       {
         title: "3-Card Poker",
-        description: "(wip) Multiplayer 3-card poker app built with Java, JavaFX, Apache Maven, and 250+ JUnit 5 unit tests.",
-        images: [
+        description: [
+          "Three-card poker that allows concurrency by having multiple users play over a single host server.",
+          "Backend: Java",
+          "Frontend: JavaFX",
+          "Unit-tested with JUnit 5 with 250+ tests to check betting logic and server consistency.",
+          "Betting system based on ante, pair plus, and playing bets",
+        ].join('\n'),        images: [
           { src: pokerMainMenu, caption: "Main Menu" },
           { src: pokerExampleOne, caption: "Gameplay #1" },
           { src: pokerExampleTwo, caption: "Gameplay #2" },
@@ -147,7 +175,7 @@ function Projects() {
             {section.projects.map((project, j) => (
               <div key={j}>
                 <h3>{project.title}</h3>
-                <p>{project.description}</p>
+                <p style={{ marginTop: '-10px' }}>{project.description}</p>
                 <ImageScroller images={project.images} />
               </div>
             ))}
