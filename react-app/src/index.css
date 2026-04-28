@@ -155,3 +155,12 @@ a {
   /* justify-content: center;
   gap: 340px; */
 }
+
+/* Contacts Section */
+.small-img {
+  margin-top: 17px;
+  background: rgba(255,255,255,.85);
+  border-radius: 1.5px;
+  width: 5%;
+  height: 5%;
+}
