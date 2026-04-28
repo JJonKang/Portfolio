@@ -9,7 +9,15 @@ function Certificates() {
           Amazon Web Services Cloud Practitioner
         </h2>
       </div>
-      
+      <div>
+        <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/74a0b2a15ce24a8783b6862209c3e350"
+          target="_blank" className="cert">
+          https://cp.certmetrics.com/amazon/en/public/verify/credential/74a0b2a15ce24a8783b6862209c3e350
+        </a>
+      </div>
+      <div>
+        <p>June 01, 2025 - June 01, 2028</p>
+      </div>
     </div>
   )
 }
