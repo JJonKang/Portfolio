@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route, Link, Outlet, useLocation } from 'react-router-dom'
+import { HashRouter, Routes, Route, Link, Outlet, useLocation, useNavigate } from 'react-router-dom'
 //previously used BrowserRouter but seems that HashRouter is good for GitHub hosting
 import { useState } from 'react'
 import './index.css'
@@ -11,11 +11,14 @@ import Contacts from './pages/Contacts.jsx'
 /////////////////////////////////////
 // Easily change the version name
 function Version() {
-  return "Version 1.0.0"
+  return "Version 1.1.0"
 }
 
 /////////////////////////////////////
 // Breadcrumb for webpage navigation
+// Obsolete at the moment, it stays
+// For reference
+// Replaced by ButtonTraversal
 function Breadcrumb() {
   const location = useLocation()
   const paths = location.pathname.split('/').filter(Boolean)
@@ -39,6 +42,85 @@ function Breadcrumb() {
 };
 
 /////////////////////////////////////
+// Breadcrumbs but Buttons
+// Easy way to traverse
+// through the pages
+function ButtonTraversal() {
+  const location = useLocation()
+  const navigate = useNavigate()
+  const paths = location.pathname.split('/').filter(Boolean)
+  const crumbs = ['Home', ...paths.map(p => p.charAt(0).toUpperCase() + p.slice(1))]
+
+  // dimensions and style of the trapezoids
+  const skew = 14
+  const height = 44
+  const width = 126
+  const colors = ['#534AB7', '#3C3489', '#26215C', '#3C3489']
+
+  const totalWidth = width * crumbs.length - skew * (crumbs.length - 1)
+
+  return (
+    <div className="breadcrumb-trapezoidal">
+    <svg width={totalWidth} height={height} viewBox={`0 0 ${totalWidth} ${height}`}>
+      
+      {/* render all polygons first */}
+      {crumbs.map((crumb, i) => {
+        const isFirst = i === 0
+        const isLast = i === crumbs.length - 1
+        const path = isFirst ? '/' : '/' + paths.slice(0, i).join('/')
+        const offsetX = i * (width - skew)
+        const tl = isFirst ? 0 : skew
+        const points = `
+          ${offsetX + tl},0
+          ${offsetX + width},0
+          ${offsetX + width - skew},${height}
+          ${offsetX},${height}
+        `
+        const color = colors[i % colors.length]
+        return (
+          <polygon
+            key={i}
+            points={points}
+            fill={color}
+            style={{ cursor: isLast ? 'default' : 'pointer' }}
+            onClick={() => !isLast && navigate(path)}
+          />
+        )
+      })}
+
+      {/* render all text on top */}
+      {crumbs.map((crumb, i) => {
+        const isFirst = i === 0
+        const isLast = i === crumbs.length - 1
+        const path = isFirst ? '/' : '/' + paths.slice(0, i).join('/')
+        const offsetX = i * (width - skew)
+        const tl = isFirst ? 0 : skew
+        const cx = offsetX + (tl + width - skew) / 2 + 4
+
+        return (
+          <text
+            key={i}
+            x={cx}
+            y={height / 2}
+            dominantBaseline="middle"
+            textAnchor="middle"
+            fill="white"
+            fontSize={12}
+            fontWeight={500}
+            style={{ cursor: isLast ? 'default' : 'pointer' }}
+            onClick={() => !isLast && navigate(path)}
+          >
+            {crumb}
+          </text>
+        )
+      })}
+
+    </svg>
+    </div>
+  )
+}
+
+/////////////////////////////////////
 // Keep these in multiple webpages
 function Layout({ dark, setDark }) {
   const btnLightClass = "box-btn-color-change " + (dark ? 'box-btn-dark' : 'box-btn-light')
@@ -59,7 +141,7 @@ function Layout({ dark, setDark }) {
         )}
       </button>
       <Outlet />
-      <Breadcrumb />
+      <ButtonTraversal />
       <p className="footer-text-version"><Version /></p>
     </div>
   );
