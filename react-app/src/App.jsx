@@ -1,6 +1,6 @@
 import { HashRouter, Routes, Route, Link, Outlet, useLocation, useNavigate } from 'react-router-dom'
 //previously used BrowserRouter but seems that HashRouter is good for GitHub hosting
-import { useState } from 'react'
+import { useState, lazy, Suspense } from 'react'
 import './index.css'
 import About from './written/About.jsx'
 import Resume from './pages/Resume.jsx'
@@ -173,6 +173,7 @@ function Home({ dark }) {
 // the home page
 function App() {
   const [dark, setDark] = useState(false)
+  const Resume = lazy(() => import('./pages/Resume'))
   document.body.className = dark ? 'dark' : 'light';
 
   return (
@@ -180,7 +181,11 @@ function App() {
       <Routes>
         <Route element={<Layout dark={dark} setDark={setDark} />}>
           <Route path="/" element={<Home dark={dark} />} />
-          <Route path="/resume" element={<Resume />} />
+          <Route path="/resume" element={
+            //<Suspense fallback={<div>Loading...</div>}>
+            <Resume />
+            //</Suspense>
+          } />
           <Route path="/projects" element={<Projects />} />
           <Route path="/certificates" element={<Certificates />} />
           <Route path="/contacts" element={<Contacts />} />

@@ -154,11 +154,23 @@ a {
 }
 
 /* Resume and other file insertions */
+/* .resume might be obsolete right now */
 .resume {
   display: block;
   margin: auto;
   width: 80%;
   height: 1000px;
+}
+/* react pdf version */
+.resume-reader {
+  position: relative;
+}
+.react-reader-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 /* spacing out the contacts */

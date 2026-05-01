@@ -6,6 +6,9 @@ import path from 'path'
 export default defineConfig({
   base: '/Portfolio/',
   plugins: [react()],
+  optimizeDeps: {
+    include: ['react-pdf'],
+  },
   resolve: {
     alias: {
       // It's just to have it be easier when it potentially
