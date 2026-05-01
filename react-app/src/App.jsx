@@ -173,7 +173,7 @@ function Home({ dark }) {
 // the home page
 function App() {
   const [dark, setDark] = useState(false)
-  const Resume = lazy(() => import('./pages/Resume'))
+  // const Resume = lazy(() => import('./pages/Resume'))
   document.body.className = dark ? 'dark' : 'light';
 
   return (
