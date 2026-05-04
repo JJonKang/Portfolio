@@ -174,9 +174,31 @@ function Home({ dark }) {
 // Hub for all details, including
 // the home page
 function App() {
-  const [dark, setDark] = useState(false)
+  const [dark, setDark] = useState(() => {
+    return localStorage.getItem('dark') === 'true'
+  })
+
+  useEffect(() => {
+    localStorage.setItem('dark', dark)
+    document.body.classList.remove('dark', 'light')
+    document.body.classList.add(dark ? 'dark' : 'light')
+  }, [dark])
+
+  // To deal with the Flash of Unstyled Content (FOUC)
+  useEffect(() => {
+    document.body.style.visibility = 'visible'
+  }, [])
+
+  // To deal with the transition occuring at the beginning
+  useEffect(() => {
+    const t = setTimeout(() => {
+      document.body.classList.add('transitions-enabled')
+    }, 100)
+    return () => clearTimeout(t)
+  }, [])
+
   // const Resume = lazy(() => import('./pages/Resume'))
-  document.body.className = dark ? 'dark' : 'light';
+  // document.body.className = dark ? 'dark' : 'light';
 
   return (
     <HashRouter>

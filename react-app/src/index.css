@@ -12,11 +12,17 @@ priority layers (z-index):
 10: centered zoomed image
 */
 
-/* Mainly for priority layering for now */
+/* Mainly for priority layering and transition */
 :root {
   --default: 0;
   --light-button: 5;
   --centered-image: 10;
+  --transition: 0.15s;
+}
+
+/* transition */
+.box-btn-color-change, .box-btn {
+  transition: background-color var(--transition) ease;
 }
 
 /* Background */
@@ -24,7 +30,6 @@ body {
   font-family: "Nova Round", system-ui;
   font-weight: 50; /* there is only like two font weights with this supported font */
   font-style: normal;
-  transition: background-color 0.3s ease;
 }
 
 body.dark {
@@ -33,6 +38,10 @@ body.dark {
 
 body.light {
   background-color: #d4d3ff
+}
+
+body.transitions-enabled {
+  transition: background-color var(--transition) ease;
 }
 
 /* Miscallaneous lines */
@@ -122,7 +131,6 @@ p {
   width: 50px;
   height: 50px;
   color: #2c2b8e;
-  transition: background-color 0.3s ease;
   box-shadow: 0 2px 3px #2c2b8e;
   z-index: var(--light-button); /* Priority layer */
 }
@@ -132,7 +140,6 @@ p {
   width: 33%;
   height: 270px;
   font-size: 1.2rem;
-  transition: background-color 0.3s ease;
   box-shadow: 0 2px 3px #2c2b8e;
   font-family: "Nova Round", system-ui;
 }
