@@ -1,6 +1,6 @@
 import { HashRouter, Routes, Route, Link, Outlet, useLocation, useNavigate } from 'react-router-dom'
 //previously used BrowserRouter but seems that HashRouter is good for GitHub hosting
-import { useState, lazy, Suspense } from 'react'
+import { useState, lazy, Suspense, useEffect } from 'react'
 import './index.css'
 import About from './written/About.jsx'
 import Credentials from './pages/Credentials.jsx'
@@ -10,7 +10,7 @@ import Contacts from './pages/Contacts.jsx'
 /////////////////////////////////////
 // Easily change the version name
 function Version() {
-  return "Version 1.1.0"
+  return "Version 1.2.1"
 }
 
 /////////////////////////////////////
@@ -124,6 +124,10 @@ function ButtonTraversal() {
 function Layout({ dark, setDark }) {
   const btnLightClass = "box-btn-color-change " + (dark ? 'box-btn-dark' : 'box-btn-light')
   const location = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname])
 
   return (
     <div>
