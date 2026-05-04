@@ -22,3 +22,9 @@ After, start up website:
 cd react-app
 npm install (if you haven't installed dependencies yet)
 npm run dev
+
+
+
+Preview deploy without actually deploying:
+npm run build
+npm run preview

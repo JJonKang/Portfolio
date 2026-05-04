@@ -3,9 +3,8 @@ import { HashRouter, Routes, Route, Link, Outlet, useLocation, useNavigate } fro
 import { useState, lazy, Suspense } from 'react'
 import './index.css'
 import About from './written/About.jsx'
-import Resume from './pages/Resume.jsx'
+import Credentials from './pages/Credentials.jsx'
 import Projects from './pages/Projects.jsx'
-import Certificates from './pages/Certificates.jsx'
 import Contacts from './pages/Contacts.jsx'
 
 /////////////////////////////////////
@@ -160,8 +159,7 @@ function Home({ dark }) {
       <About />
       <div className="box-buttons">
         <Link to="/projects"><button className={btnClass}>Projects</button></Link>
-        <Link to="/certificates"><button className={btnClass}>Certificates</button></Link>
-        <Link to="/resume"><button className={btnClass}>Resume</button></Link>
+        <Link to="/credentials"><button className={btnClass}>Credentials</button></Link>
         <Link to="/contacts"><button className={btnClass}>Contacts</button></Link>
       </div>
     </div>
@@ -181,13 +179,12 @@ function App() {
       <Routes>
         <Route element={<Layout dark={dark} setDark={setDark} />}>
           <Route path="/" element={<Home dark={dark} />} />
-          <Route path="/resume" element={
+          <Route path="/credentials" element={
             //<Suspense fallback={<div>Loading...</div>}>
-            <Resume />
+            <Credentials />
             //</Suspense>
           } />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/certificates" element={<Certificates />} />
           <Route path="/contacts" element={<Contacts />} />
         </Route>
       </Routes>

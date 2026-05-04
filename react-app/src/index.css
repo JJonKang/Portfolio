@@ -129,8 +129,8 @@ p {
 
 .box-btn {
   margin: 0 auto;
-  width: 350px;
-  height: 190px;
+  width: 33%;
+  height: 270px;
   font-size: 1.2rem;
   transition: background-color 0.3s ease;
   box-shadow: 0 2px 3px #2c2b8e;
