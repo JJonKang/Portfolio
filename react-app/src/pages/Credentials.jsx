@@ -3,8 +3,8 @@ import '../index.css'
 // import workerSrc from 'react-pdf/dist/pdf.worker.entry.js?url'
 
 // pdfjs.GlobalWorkerOptions.workerSrc = workerSrc
-
 import awsLogo from "@/assets/misc/aws.png"
+
 function Certificates() {
   return (
     <div>
