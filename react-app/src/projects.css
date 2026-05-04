@@ -17,8 +17,29 @@ priority layers (z-index):
   display: flex;
   overflow-x: auto;
   gap: 1.8rem;
+  background-color: #1f1cc72c;
+  padding: 6px 6px;
+  border-radius: 3px;
+
+  scrollbar-color: #1e1d5f transparent;
+  scrollbar-width: thin;
 }
 
+/* scroller bar related if part of the scroller properties don't work */
+.scroller::-webkit-scrollbar {
+  height: 6px;
+} 
+
+.scroller::-webkit-scrollbar-thumb {
+  background: #1e1d5f;
+  border-radius: 3px;
+}
+
+.scroller::-webkit-scrollbar-thumb:hover {
+  background: #7b87d8;
+}
+
+/* Image details, spacing, aesthetics */
 .scroller-item {
   min-width: 250px;
   text-align: center;
