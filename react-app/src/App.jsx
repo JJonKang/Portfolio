@@ -10,7 +10,7 @@ import Contacts from './pages/Contacts.jsx'
 /////////////////////////////////////
 // Easily change the version name
 function Version() {
-  return "Version 1.2.2"
+  return "Version 1.2.3"
 }
 
 /////////////////////////////////////
@@ -157,7 +157,7 @@ function Home({ dark }) {
   const btnClass = "box-btn " + (dark ? 'box-btn-dark' : 'box-btn-light')
 
   return (
-    <div>
+    <div className="page-content">
       <div className="line-u" />
       <h1 className="title">Portfolio</h1>
       <About />

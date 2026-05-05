@@ -166,7 +166,7 @@ function ImageScroller({ images }) {
 
 function Projects() {
   return (
-    <div>
+    <div className="page-content">
       <h1 style={{ marginTop: '35px' }}>Projects</h1>
       <div>
         {projects.map((section, i) => (

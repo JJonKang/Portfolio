@@ -16,9 +16,9 @@ function Certificates() {
         </h2>
       </div>
       <div>
-        <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/74a0b2a15ce24a8783b6862209c3e350"
+        <a style={{ display: 'inline' }} href="https://cp.certmetrics.com/amazon/en/public/verify/credential/74a0b2a15ce24a8783b6862209c3e350"
           target="_blank" className="cert">
-          https://cp.certmetrics.com/amazon/en/public/verify/credential/74a0b2a15ce24a8783b6862209c3e350
+          <u>Link-To-AWS-Credential</u>
         </a>
       </div>
       <div>
@@ -42,7 +42,7 @@ function Resume() {
 
 function Credentials() {
   return (
-    <div>
+    <div className="page-content">
       <Certificates />
       <Resume />
     </div>

@@ -20,6 +20,12 @@ priority layers (z-index):
   --transition: 0.15s;
 }
 
+.page-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2.3rem;
+}
+
 /* transition */
 .box-btn-color-change, .box-btn {
   transition: background-color var(--transition) ease;
