@@ -1,6 +1,6 @@
 import { HashRouter, Routes, Route, Link, Outlet, useLocation, useNavigate } from 'react-router-dom'
 //previously used BrowserRouter but seems that HashRouter is good for GitHub hosting
-import { useState, lazy, Suspense, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import './index.css'
 import About from './written/About.jsx'
 import Credentials from './pages/Credentials.jsx'
@@ -10,7 +10,7 @@ import Contacts from './pages/Contacts.jsx'
 /////////////////////////////////////
 // Easily change the version name
 function Version() {
-  return "Version 1.2.3"
+  return "Version 1.3.0"
 }
 
 /////////////////////////////////////
@@ -197,18 +197,13 @@ function App() {
     return () => clearTimeout(t)
   }, [])
 
-  // const Resume = lazy(() => import('./pages/Resume'))
-  // document.body.className = dark ? 'dark' : 'light';
-
   return (
     <HashRouter>
       <Routes>
         <Route element={<Layout dark={dark} setDark={setDark} />}>
           <Route path="/" element={<Home dark={dark} />} />
           <Route path="/credentials" element={
-            //<Suspense fallback={<div>Loading...</div>}>
-            <Credentials />
-            //</Suspense>
+            <Credentials dark={dark} setDark={setDark} />
           } />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contacts" element={<Contacts />} />

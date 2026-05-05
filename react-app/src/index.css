@@ -26,8 +26,15 @@ priority layers (z-index):
   padding: 0 2.8rem;
 }
 
+/* Something about changing the basic layout of link a */
+a {
+  display: contents;
+  text-decoration: none;
+  color: #445dfa;
+}
+
 /* transition */
-.box-btn-color-change, .box-btn {
+.box-btn-color-change, .box-btn, .box-btn-resume {
   transition: background-color var(--transition) ease;
 }
 
@@ -52,7 +59,7 @@ body.transitions-enabled {
 
 /* Miscallaneous lines */
 .line-u {
-  width: 580px;
+  width: 53%;
   margin: -10px auto;
   height: 125px;
   border-left: 1.5px solid #1e1d5f;
@@ -137,7 +144,16 @@ p {
   width: 50px;
   height: 50px;
   color: #2c2b8e;
-  box-shadow: 0 2px 3px #2c2b8e;
+  box-shadow: 0 1px 3px 0.8px #2c2b8e;
+  z-index: var(--light-button); /* Priority layer */
+}
+
+.box-btn-resume {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  color: #49488b;
+  box-shadow: 0 1px 3px 2.8px #49488b;
   z-index: var(--light-button); /* Priority layer */
 }
 
@@ -159,32 +175,23 @@ p {
   background-color: #dfd9ff; 
 }
 
-/* Something about changing the basic layout of link a */
-a {
-  display: contents;
-  text-decoration: none;
-  color: #445dfa;
-}
-
-/* Resume and other file insertions */
-/* .resume might be obsolete right now */
-.resume {
-  display: block;
-  margin: auto;
-  width: 80%;
-  height: 1000px;
-}
+/* Resume and other(?) file insertions */
 /* react pdf version */
 .resume-reader {
-  position: relative;
+  display: flex;
+  justify-content: center;
 }
-.react-reader-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
+
+/* Resume Download Button and Resume Title Text Divider*/
+.resume-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 35px;
+  margin-bottom: 3rem;
 }
+
 
 /* spacing out the contacts */
 .contact-divider {
