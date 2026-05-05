@@ -10,7 +10,7 @@ import Contacts from './pages/Contacts.jsx'
 /////////////////////////////////////
 // Easily change the version name
 function Version() {
-  return "Version 1.2.1"
+  return "Version 1.2.2"
 }
 
 /////////////////////////////////////
